@@ -1,0 +1,13 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+.kotlin/
+# Signing key and its secret text: never commit
+*.keystore
+*.jks
+signing-secret*.txt
+_upload/

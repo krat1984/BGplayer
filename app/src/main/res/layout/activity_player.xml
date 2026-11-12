@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:show_buffering="when_playing"
+        app:show_shuffle_button="false" />
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="#99000000"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button android:id="@+id/btnFolder" style="@style/BarButton" android:text="Папка" />
+                <Button android:id="@+id/btnFile" style="@style/BarButton" android:text="Файл" />
+                <Button android:id="@+id/btnPlaylist" style="@style/BarButton" android:text="Список" />
+                <Button android:id="@+id/btnPrevChapter" style="@style/BarButton" android:text="⏮ Глава" />
+                <Button android:id="@+id/btnNextChapter" style="@style/BarButton" android:text="Глава ⏭" />
+                <Button android:id="@+id/btnChapters" style="@style/BarButton" android:text="Главы" />
+                <Button android:id="@+id/btnLoop" style="@style/BarButton" android:text="Повтор" />
+                <Button android:id="@+id/btnTimer" style="@style/BarButton" android:text="Таймер" />
+                <Button android:id="@+id/btnLogs" style="@style/BarButton" android:text="Логи" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+    </LinearLayout>
+</FrameLayout>
